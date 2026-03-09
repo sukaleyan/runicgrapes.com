@@ -21,8 +21,13 @@
   font-display: swap;
 }
 
-/* Import Caveat for script accents */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap');
+@font-face {
+  font-family: 'Biro Script';
+  src: url('../fonts/Biro Script Plus.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* --------------------------------------------------------------------------
    CSS Custom Properties (Design Tokens)
@@ -40,7 +45,7 @@
   /* Typography */
   --font-display: 'Architype Tschichold', sans-serif;
   --font-body: 'Armature', sans-serif;
-  --font-script: 'Caveat', cursive;
+  --font-script: 'Biro Script', cursive;
 
   /* Font Sizes - Fluid Typography */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -364,7 +369,7 @@ p:last-child {
 .hero__subtitle {
   font-family: var(--font-script);
   font-size: var(--text-2xl);
-  color: var(--color-olive);
+  color: var(--color-navy);
   margin-bottom: var(--space-xl);
   animation: fadeInUp 1s ease 0.6s forwards;
   opacity: 0;
@@ -552,7 +557,7 @@ p:last-child {
 .artist-card__quote {
   font-family: var(--font-script);
   font-size: var(--text-xl);
-  color: var(--color-olive);
+  color: var(--color-navy);
   font-style: italic;
   padding-left: var(--space-md);
   border-left: 3px solid var(--color-burgundy);
