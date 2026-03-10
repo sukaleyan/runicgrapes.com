@@ -956,8 +956,30 @@ p:last-child {
 /* --------------------------------------------------------------------------
    Carousel
    -------------------------------------------------------------------------- */
+.carousel-section {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+}
+
 .carousel {
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .carousel .featured-card {
+    gap: var(--space-lg);
+  }
+
+  .carousel .featured-card__placeholder {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .carousel .featured-card__title {
+    font-size: var(--text-xl);
+  }
 }
 
 .carousel__slide {
