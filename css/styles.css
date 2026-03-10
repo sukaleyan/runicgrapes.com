@@ -242,8 +242,9 @@ p:last-child {
 }
 
 .header__tagline {
-  font-size: var(--text-xs);
-  color: var(--color-navy-light);
+  font-family: var(--font-script);
+  font-size: var(--text-sm);
+  color: var(--color-navy);
   display: none;
 }
 
