@@ -245,12 +245,12 @@ p:last-child {
   font-family: var(--font-script);
   font-size: var(--text-sm);
   color: var(--color-navy);
-  display: none;
+  display: block;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 500px) {
   .header__tagline {
-    display: block;
+    display: none;
   }
 }
 
@@ -374,8 +374,9 @@ p:last-child {
 }
 
 .hero__tagline {
-  font-family: var(--font-script);
+  font-family: var(--font-body);
   font-size: var(--text-xl);
+  font-style: italic;
   color: var(--color-navy);
   margin-bottom: var(--space-lg);
   animation: fadeInUp 1s ease 0.4s forwards;
@@ -1153,43 +1154,49 @@ p:last-child {
   box-shadow: var(--shadow-lg);
 }
 
-/* Article Decorative Elements */
-.article__decor {
-  position: fixed;
+/* Article Date */
+.article__date {
+  font-size: var(--text-sm);
+  color: var(--color-navy-light);
+  margin-top: var(--space-md);
+  letter-spacing: 0.05em;
+}
+
+/* Article Decorative Elements (Inline) */
+.article__decor-wrap {
+  position: relative;
+  height: 0;
+  overflow: visible;
   pointer-events: none;
-  z-index: -1;
+}
+
+.article__decor-wrap--right {
+  text-align: right;
+  margin-right: -200px;
+}
+
+.article__decor-wrap--left {
+  text-align: left;
+  margin-left: -200px;
+}
+
+.article__decor-inline {
+  width: 300px;
+  height: auto;
   opacity: 0.15;
+  transform: translateY(-50px);
 }
 
-.article__decor--top-right {
-  top: 15%;
-  right: -5%;
-  width: 200px;
-  transform: rotate(10deg);
+.article__decor-wrap--right .article__decor-inline {
+  transform: translateY(-50px) rotate(10deg);
 }
 
-.article__decor--bottom-left {
-  bottom: 20%;
-  left: -5%;
-  width: 180px;
-  transform: rotate(-15deg);
+.article__decor-wrap--left .article__decor-inline {
+  transform: translateY(-50px) rotate(-10deg);
 }
 
-.article__decor--mid-right {
-  top: 50%;
-  right: -3%;
-  width: 150px;
-  transform: rotate(5deg);
-}
-
-@media (max-width: 1200px) {
-  .article__decor {
-    opacity: 0.08;
-  }
-}
-
-@media (max-width: 768px) {
-  .article__decor {
+@media (max-width: 1000px) {
+  .article__decor-wrap {
     display: none;
   }
 }
