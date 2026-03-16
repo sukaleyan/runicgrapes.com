@@ -248,9 +248,9 @@ p:last-child {
   display: block;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   .header__tagline {
-    display: none;
+    font-size: var(--text-xs);
   }
 }
 
