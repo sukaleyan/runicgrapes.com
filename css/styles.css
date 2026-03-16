@@ -558,6 +558,15 @@ p:last-child {
   object-fit: cover;
 }
 
+.artist-card__image--bw {
+  filter: grayscale(100%);
+  transition: filter var(--transition-base);
+}
+
+.artist-card:hover .artist-card__image--bw {
+  filter: grayscale(0%);
+}
+
 .artist-card__name {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
