@@ -759,9 +759,22 @@ p:last-child {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: var(--space-lg);
-  padding: 0 var(--space-md) var(--space-3xl);
+  padding: var(--space-2xl) var(--space-md) var(--space-3xl);
   max-width: var(--max-width);
   margin: 0 auto;
+  position: relative;
+}
+
+.blog-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-burgundy), transparent);
+  opacity: 0.4;
 }
 
 .blog-card {
