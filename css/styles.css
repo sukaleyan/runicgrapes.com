@@ -1297,8 +1297,9 @@ p:last-child {
 }
 
 .article__content .pullquote {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--text-2xl);
+  font-style: italic;
   color: var(--color-burgundy);
   text-align: center;
   padding: var(--space-lg) 0;
