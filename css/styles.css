@@ -1268,14 +1268,22 @@ p:last-child {
 
 .article__content h2 {
   font-size: var(--text-2xl);
+  font-weight: normal;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
 }
 
 .article__content h3 {
   font-size: var(--text-xl);
+  font-weight: normal;
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
 }
 
 .article__content blockquote {
