@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const startAutoPlay = () => {
+      clearInterval(autoPlayInterval);
       autoPlayInterval = setInterval(nextSlide, SLIDE_DURATION);
     };
 
