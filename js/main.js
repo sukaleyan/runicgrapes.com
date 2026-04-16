@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = carousel.querySelectorAll('.carousel__dot');
     let currentSlide = 0;
     let autoPlayInterval;
-    const SLIDE_DURATION = 10000; // 10 seconds
+    const SLIDE_DURATION = 5000; // 5 seconds
 
     const showSlide = (index) => {
       // Hide all slides
