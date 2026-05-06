@@ -139,4 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
       isPaused = false;
     });
   }
+
+  // ==========================================================================
+  // Product Gallery
+  // ==========================================================================
+  const galleryMain = document.getElementById('galleryMain');
+  const galleryThumbs = document.querySelectorAll('.gallery__thumb');
+
+  if (galleryMain && galleryThumbs.length > 0) {
+    galleryThumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const newSrc = thumb.dataset.src;
+
+        // Update main image
+        galleryMain.style.opacity = '0';
+        setTimeout(() => {
+          galleryMain.src = newSrc;
+          galleryMain.style.opacity = '1';
+        }, 150);
+
+        // Update active state
+        galleryThumbs.forEach(t => t.classList.remove('gallery__thumb--active'));
+        thumb.classList.add('gallery__thumb--active');
+      });
+    });
+  }
 });
