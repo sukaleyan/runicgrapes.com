@@ -11,3 +11,10 @@ Thumbs.db
 # Build files
 node_modules/
 dist/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
