@@ -164,4 +164,36 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ==========================================================================
+  // Product Detail Toggle
+  // ==========================================================================
+  const productCards = document.querySelectorAll('.product-card__link');
+  const productDetails = document.querySelectorAll('.product-detail');
+  const closeButtons = document.querySelectorAll('.product-detail__close');
+
+  productCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = card.getAttribute('href');
+      const targetDetail = document.querySelector(targetId);
+
+      if (targetDetail) {
+        targetDetail.classList.add('product-detail--open');
+        setTimeout(() => {
+          targetDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
+    });
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const detail = btn.closest('.product-detail');
+      if (detail) {
+        detail.classList.remove('product-detail--open');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
 });
