@@ -141,29 +141,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // Product Gallery
+  // Product Gallery (supports multiple galleries)
   // ==========================================================================
-  const galleryMain = document.getElementById('galleryMain');
-  const galleryThumbs = document.querySelectorAll('.gallery__thumb');
+  const allGalleryThumbs = document.querySelectorAll('.gallery__thumb');
 
-  if (galleryMain && galleryThumbs.length > 0) {
-    galleryThumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        const newSrc = thumb.dataset.src;
+  allGalleryThumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const newSrc = thumb.dataset.src;
 
-        // Update main image
-        galleryMain.style.opacity = '0';
-        setTimeout(() => {
-          galleryMain.src = newSrc;
-          galleryMain.style.opacity = '1';
-        }, 150);
+      // Find the parent gallery container and its main image
+      const gallery = thumb.closest('.shop-featured__gallery');
+      if (!gallery) return;
 
-        // Update active state
-        galleryThumbs.forEach(t => t.classList.remove('gallery__thumb--active'));
-        thumb.classList.add('gallery__thumb--active');
-      });
+      const mainImg = gallery.querySelector('.gallery__main img');
+      if (!mainImg) return;
+
+      // Update main image with fade
+      mainImg.style.opacity = '0';
+      setTimeout(() => {
+        mainImg.src = newSrc;
+        mainImg.style.opacity = '1';
+      }, 150);
+
+      // Update active state only within this gallery
+      const siblingThumbs = gallery.querySelectorAll('.gallery__thumb');
+      siblingThumbs.forEach(t => t.classList.remove('gallery__thumb--active'));
+      thumb.classList.add('gallery__thumb--active');
     });
-  }
+  });
 
   // ==========================================================================
   // Product Detail Toggle
