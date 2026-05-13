@@ -1587,6 +1587,14 @@ p:last-child {
   margin-bottom: var(--space-lg);
 }
 
+.shop-featured__button {
+  display: inline-block;
+}
+
+.shop-featured__button iframe {
+  max-width: 100% !important;
+}
+
 @media (max-width: 768px) {
   .shop-featured {
     grid-template-columns: 1fr;
