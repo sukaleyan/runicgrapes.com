@@ -1,0 +1,7 @@
+# Runic Grapes - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://runicgrapes.com/sitemap.xml
