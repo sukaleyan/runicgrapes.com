@@ -32,9 +32,15 @@
   </url>
   <url>
     <loc>https://runicgrapes.com/blog/index.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://runicgrapes.com/blog/mantegna-bacchanal.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://runicgrapes.com/blog/st-lubin-window.html</loc>
