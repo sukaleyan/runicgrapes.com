@@ -233,6 +233,30 @@
   font-style: italic;
 }
 
+/* Q&A item with image */
+.artist-qa__item--with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.artist-qa__image img {
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .artist-qa__item--with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-qa__image {
+    order: -1;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Artist Closing
    -------------------------------------------------------------------------- */
