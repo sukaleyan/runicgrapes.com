@@ -20,13 +20,19 @@
   </url>
   <url>
     <loc>https://runicgrapes.com/artists.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://runicgrapes.com/artists/mine-burckin.html</loc>
     <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://runicgrapes.com/artists/jean-luc-maniouloux.html</loc>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

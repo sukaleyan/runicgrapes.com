@@ -138,6 +138,34 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Image-only section (centered) */
+.artist-section--image-only {
+  display: block;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.artist-section--image-only img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow-md);
+  margin: 0 auto;
+}
+
+.artist-section__image--duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.artist-section__image--duo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
 @media (max-width: 768px) {
   .artist-section {
     grid-template-columns: 1fr;
@@ -151,6 +179,15 @@
 
   .artist-section__image {
     order: -1;
+  }
+
+  .artist-section__image--duo {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .artist-section__image--duo img {
+    aspect-ratio: auto;
   }
 }
 
