@@ -83,28 +83,8 @@
   <section class="section carousel-section">
     <div class="container">
       <div class="carousel" id="featuredCarousel">
-        <!-- Slide 1: Blog Post -->
+        <!-- Slide 1: Featured Artist (latest) -->
         <div class="carousel__slide carousel__slide--active" data-slide="0">
-          <div class="featured-card animate-on-scroll">
-            <div class="featured-card__label">from the blog</div>
-            <div class="featured-card__content">
-              <h2 class="featured-card__title">to my parents</h2>
-              <p class="featured-card__text">
-                In 1924, Miró painted a wine bottle in Paris and dedicated it to his family
-                in Catalonia. Wine as a bridge between two worlds.
-              </p>
-              <a href="blog/miro-bottle-of-wine.html" class="btn">read the story</a>
-            </div>
-            <div class="featured-card__image">
-              <div class="featured-card__placeholder">
-                <img src="blog/images/miro-bottle/bottle-of-vine-joan-miro-1924.jpg" alt="The Bottle of Wine by Joan Miró, 1924" style="width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.85;">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2: Featured Artist -->
-        <div class="carousel__slide" data-slide="1">
           <div class="featured-card featured-card--reverse animate-on-scroll">
             <div class="featured-card__label">featured artist</div>
             <div class="featured-card__content">
@@ -124,10 +104,30 @@
           </div>
         </div>
 
+        <!-- Slide 2: Blog Post (latest) -->
+        <div class="carousel__slide" data-slide="1">
+          <div class="featured-card animate-on-scroll">
+            <div class="featured-card__label">from the blog</div>
+            <div class="featured-card__content">
+              <h2 class="featured-card__title">what jade cannot protect</h2>
+              <p class="featured-card__text">
+                Shah Jahan's wine cup was carved from jade believed to protect against poison.
+                A year later, he lost his throne. The cup survived.
+              </p>
+              <a href="blog/shah-jahan-wine-cup.html" class="btn">read the story</a>
+            </div>
+            <div class="featured-card__image">
+              <div class="featured-card__placeholder">
+                <img src="blog/images/mughal cup/shah jahan wine cup.jpg" alt="Wine cup of Shah Jahan, 1657" style="width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.85;">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Carousel Navigation -->
         <div class="carousel__nav">
-          <button class="carousel__dot carousel__dot--active" data-slide="0" aria-label="Show blog post"></button>
-          <button class="carousel__dot" data-slide="1" aria-label="Show featured artist"></button>
+          <button class="carousel__dot carousel__dot--active" data-slide="0" aria-label="Show featured artist"></button>
+          <button class="carousel__dot" data-slide="1" aria-label="Show blog post"></button>
         </div>
       </div>
     </div>
