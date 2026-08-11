@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spot the Wine - An invitation to discover, document, and share the visual and material culture of wine across Europe's wine regions.">
+  <title>Spot the Wine | Runic Grapes</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Spot the Wine | Runic Grapes">
+  <meta property="og:description" content="An invitation to discover, document, and share the visual and material culture of wine across Europe's wine regions.">
+  <meta property="og:image" content="https://runicgrapes.com/images/logo.png">
+  <meta property="og:url" content="https://runicgrapes.com/spot-the-wine.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    .stw-hero {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      text-align: center;
+      background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-white) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stw-hero__tagline {
+      font-size: var(--text-lg);
+      color: var(--color-navy);
+      max-width: 580px;
+      margin: var(--space-md) auto 0;
+      line-height: 1.6;
+    }
+
+    .stw-section {
+      padding: var(--space-2xl) 0;
+      position: relative;
+    }
+
+    .stw-section h2 {
+      margin-bottom: var(--space-lg);
+      font-size: var(--text-2xl);
+    }
+
+    .stw-prose {
+      font-size: var(--text-lg);
+      color: var(--color-navy);
+      line-height: 1.8;
+    }
+
+    .stw-prose p {
+      margin-bottom: var(--space-md);
+    }
+
+    .stw-prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stw-emphasis {
+      font-style: italic;
+      color: var(--color-burgundy);
+    }
+
+    .stw-how {
+      margin-top: var(--space-xl);
+    }
+
+    .stw-how__mode {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-lg);
+      background: var(--color-white);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      border-left: 3px solid var(--color-olive);
+    }
+
+    .stw-how__mode:last-child {
+      border-left-color: var(--color-burgundy);
+      margin-bottom: 0;
+    }
+
+    .stw-how__mode-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      color: var(--color-burgundy);
+      margin-bottom: var(--space-sm);
+      text-transform: lowercase;
+    }
+
+    .stw-how__mode p {
+      margin-bottom: var(--space-sm);
+    }
+
+    .stw-how__mode p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stw-pilot {
+      background: var(--color-burgundy);
+      color: var(--color-white);
+      padding: var(--space-xl);
+      border-radius: 8px;
+      margin-top: var(--space-xl);
+    }
+
+    .stw-pilot p {
+      opacity: 0.95;
+      margin-bottom: var(--space-md);
+    }
+
+    .stw-pilot p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stw-founder {
+      margin-top: var(--space-lg);
+    }
+
+    .stw-founder p {
+      margin-bottom: var(--space-md);
+    }
+
+    .stw-closing {
+      text-align: center;
+      padding: var(--space-3xl) 0;
+      position: relative;
+    }
+
+    .stw-closing p {
+      font-size: var(--text-lg);
+      max-width: 600px;
+      margin: 0 auto var(--space-md);
+      line-height: 1.7;
+    }
+
+    .stw-closing__final {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      color: var(--color-burgundy);
+      margin-top: var(--space-lg);
+    }
+
+    .stw-decor {
+      position: absolute;
+      width: 120px;
+      height: auto;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .stw-decor--top-left {
+      top: var(--space-lg);
+      left: var(--space-lg);
+    }
+
+    .stw-decor--top-right {
+      top: var(--space-lg);
+      right: var(--space-lg);
+    }
+
+    .stw-decor--bottom-left {
+      bottom: var(--space-lg);
+      left: var(--space-lg);
+    }
+
+    .stw-decor--bottom-right {
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+    }
+
+    @media (max-width: 768px) {
+      .stw-decor {
+        width: 80px;
+        opacity: 0.1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo.png" alt="Runic Grapes">
+        <div>
+          <span class="header__logo-text">runic grapes</span>
+          <span class="header__tagline">wine, beyond the glass</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="about.html" class="nav__link">about</a>
+        <a href="artists.html" class="nav__link">artists</a>
+        <a href="blog/index.html" class="nav__link">blog</a>
+        <a href="shop.html" class="nav__link">shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="stw-hero">
+    <img src="images/simetrik dal.png" alt="" class="page-decor page-decor--left">
+    <img src="images/olgun salkim.png" alt="" class="page-decor page-decor--right">
+    <div class="container">
+      <h1>spot the wine</h1>
+      <p class="stw-hero__tagline">
+        An invitation to discover, document, and share the visual and material culture of wine — the traces that surround us in every wine region but often go unnoticed.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Discovery -->
+  <section class="stw-section">
+    <div class="container container--text">
+      <h2>the discovery</h2>
+      <div class="stw-prose">
+        <p>Wine leaves its traces wherever it takes root.</p>
+
+        <p>Vines appear in architectural details. Gods and goddesses once worshipped dearly take their forms around the wine cup. Harvests are depicted, wine is celebrated, and the joy of drinking this ancient beverage is expressed in countless ways across the places where wine has taken root.</p>
+
+        <p>To my surprise, these traces are often overlooked — or even invisible — in the context of wine tourism. Wine tourism today is certainly much more than simply tasting and buying wine, but I believe the art-historical dimension of wine culture is still waiting to be fully integrated.</p>
+
+        <p>After falling in love with wine, I began my own quest to hunt down its imagery. I have travelled through wine regions across Europe — from Bordeaux to Kefalonia, Rioja to Franken, Sicily to Niederösterreich — and started a personal archive of whatever I encounter: a grape carved above a doorway, a freestanding sculpture holding a glass, the work of a contemporary artist or craftsperson displayed in a shop window or gallery.</p>
+
+        <p class="stw-emphasis">Spotting the wine has become my personal ritual whenever I visit a wine region. I cannot resist the urge to invite other wine lovers into this rewarding activity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Invitation -->
+  <section class="stw-section section--cream">
+    <img src="images/basit dal.png" alt="" class="stw-decor stw-decor--top-right" style="opacity: 0.08;">
+    <div class="container container--text">
+      <h2>the invitation</h2>
+      <div class="stw-prose">
+        <p>Spot the Wine is an invitation to look closer — to see how varied and vast wine culture actually is.</p>
+
+        <p>The idea is simple: when visiting a wine region, you move with an intention to see these traces. Vine motifs on a church portal, a Bacchus mask above a tavern door, an antique wine press in a village square, hand-thrown wine cups by a local potter, a harvest procession through the vineyards.</p>
+
+        <p>Each discovery joins a growing, crowdsourced archive, all accessible through a simple app. What you find, others can explore. What others find, you can follow.</p>
+
+        <p>Over time, a new map emerges: not of wineries and tasting rooms, but of the cultural layer that gives each wine region its character.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="stw-section">
+    <div class="container container--narrow">
+      <h2 class="text-center">how it works</h2>
+      <p class="text-center stw-prose" style="max-width: 600px; margin: 0 auto;">
+        There are two ways to use Spot the Wine.
+      </p>
+
+      <div class="stw-how">
+        <div class="stw-how__mode">
+          <div class="stw-how__mode-title">discovery</div>
+          <p>
+            You are visiting a wine region — walking through a village, browsing a market, exploring a cellar — and something catches your eye. You open the app, take a photograph, tag the category, and pin it to the map.
+          </p>
+          <p>
+            You have just added to a collective archive that did not exist before.
+          </p>
+        </div>
+
+        <div class="stw-how__mode">
+          <div class="stw-how__mode-title">exploration</div>
+          <p>
+            You are planning a visit, or already on the ground, and you want to see what others have found. You open the map, browse by region or category, and let the traces guide your route.
+          </p>
+          <p>
+            Each spot is an invitation to look closer at something you might otherwise have walked past.
+          </p>
+        </div>
+      </div>
+
+      <div class="stw-prose text-center" style="max-width: 600px; margin: var(--space-xl) auto 0;">
+        <p>To encourage attention, the platform includes a light layer of gamification. Discoveries earn points. Rare finds — the first documentation of a spot, or something in an underrepresented category — earn more. But the goal is not competition. It is contribution. It rewards attention, not speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Does -->
+  <section class="stw-section section--cream">
+    <img src="images/yaprak ve uzum.png" alt="" class="stw-decor stw-decor--bottom-left" style="opacity: 0.08;">
+    <div class="container container--text">
+      <h2>what this does</h2>
+      <div class="stw-prose">
+        <p>Spot the Wine is not about creating more attractions. It is about helping people notice what is already there — and creating value from what they find.</p>
+
+        <p>Wine has left countless traces across Europe's landscapes and cultures, but many remain unnoticed by visitors. Spot the Wine brings these fragments of visual and material culture into view and gives them context, connecting a carved grapevine, a historic object, an artwork or a local tradition to the larger story of wine.</p>
+
+        <p>Every discovery adds to a growing, crowdsourced record of wine culture. Instead of building a fixed catalogue from the top down, Spot the Wine allows the people who experience wine regions to contribute to documenting them. The archive keeps growing, changing, and reflecting both heritage and contemporary culture.</p>
+
+        <p>The cultural story of wine does not belong only to the past. Artists, craftspeople and other local creators continue to interpret and shape it today. Spot the Wine makes these people and their work part of the wine tourism experience, helping visitors discover the creative communities behind the places they visit.</p>
+
+        <p>By making cultural discoveries visible and rewarding destinations that contribute to them, Spot the Wine creates an incentive to invest in the cultural layer of a wine region. A winery that preserves a historic wine press, collaborates with an artist or supports a local cultural initiative can become part of the story visitors come to discover.</p>
+
+        <p class="stw-emphasis">In this way, Spot the Wine turns attention into participation, participation into documentation, and documentation into a richer experience of wine regions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Pilot -->
+  <section class="stw-section">
+    <div class="container container--text">
+      <h2>the pilot</h2>
+      <div class="stw-prose">
+        <p>I grew up in Anatolia, where vines have always been part of the landscape — though rarely for wine. I never thought much about them.</p>
+
+        <p>When I moved to Baden, that changed. I began traveling to wine regions across Europe, and in each one I noticed how wine culture expressed itself: in architecture, in imagery, in festivals, in the work of local makers. It was only then that I started to look more carefully at Baden itself — and found that it offers just as much. Museums dedicated to corkscrews and wine labels. Harvest festivals in nearly every village. Contemporary artists installing work among the vines. Carvings and reliefs I had walked past without seeing.</p>
+
+        <p>Baden is not the most famous wine region in Europe. It is not the first place you would think to look for wine's visual culture. That is exactly why it works as a pilot. If Baden has this much to offer, so does any wine region where the vine has taken root.</p>
+      </div>
+
+      <div class="stw-pilot">
+        <p><strong>The first pilot will launch in Baden, Germany</strong> — a region with established wine tourism, rich cultural heritage, and an existing documentation archive from my ongoing research.</p>
+        <p>The model is designed to travel. If Baden has this much to offer, so does any wine region where the vine has taken root.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Am -->
+  <section class="stw-section section--cream">
+    <img src="images/duble yaprak.png" alt="" class="stw-decor stw-decor--top-left" style="opacity: 0.08;">
+    <div class="container container--text">
+      <h2>who i am</h2>
+      <div class="stw-prose stw-founder">
+        <p>I am an art historian who became fascinated by wine.</p>
+
+        <p>My academic background has taught me to look closely — to notice details, to ask where they come from, what they meant, and how their meanings change over time. Wine gave me a new landscape in which to apply that way of looking.</p>
+
+        <p>For several years, I have been exploring wine culture through research, travel and my own growing collection of observations. Through <a href="index.html">Runic Grapes</a>, a platform I founded for wine-related art, craft and cultural writing, I work with artists and craftspeople, write about wine's visual history, and curate objects that carry its story. At the same time, I am learning viticulture on a small vineyard in Württemberg, experiencing first-hand the living side of a heritage I had previously encountered mainly through historical sources and images.</p>
+
+        <p>I have also been building a personal archive — photographing and documenting wine imagery wherever I travel, from architectural details to contemporary artworks. This ongoing practice became the working prototype for Spot the Wine.</p>
+
+        <p style="margin-top: var(--space-lg);">
+          <a href="https://sukaleyan.com/traces.html" target="_blank" rel="noopener" class="btn btn--outline">view the traces archive →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="stw-closing">
+    <img src="images/yesil salkim.png" alt="" class="stw-decor stw-decor--bottom-right" style="opacity: 0.08;">
+    <div class="container">
+      <p>
+        Wine has always been more than a drink. It has shaped landscapes, architecture, art, rituals, and communities for thousands of years. Yet much of that culture remains unseen by the visitors who pass through.
+      </p>
+      <p class="stw-closing__final">
+        spot the wine reveals what has always been there
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="Runic Grapes" class="footer__logo">
+          <p class="footer__tagline">wine, beyond the glass</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="about.html">about</a>
+          <a href="artists.html">artists</a>
+          <a href="blog/index.html">blog</a>
+          <a href="shop.html">shop</a>
+        </nav>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/runicgrapes/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.pinterest.com/runicgrapes/" aria-label="Pinterest" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 Runic Grapes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
