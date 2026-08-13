@@ -207,32 +207,36 @@
     }
 
     .stw-inline-mockup {
-      max-width: 200px;
+      max-width: 280px;
       height: auto;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: var(--shadow-md);
     }
 
     .stw-mockup-pair {
       display: flex;
-      gap: var(--space-md);
+      gap: var(--space-lg);
       justify-content: center;
       align-items: flex-start;
-      margin: var(--space-lg) 0;
+      margin: var(--space-xl) 0;
     }
 
     .stw-mockup-pair .stw-inline-mockup {
-      max-width: 160px;
+      max-width: 240px;
     }
 
     .stw-mockup-single {
       text-align: center;
-      margin: var(--space-lg) 0;
+      margin: var(--space-xl) 0;
+    }
+
+    .stw-mockup-single .stw-inline-mockup {
+      max-width: 300px;
     }
 
     .stw-how__mode-content {
       display: flex;
-      gap: var(--space-lg);
+      gap: var(--space-xl);
       align-items: center;
     }
 
@@ -242,15 +246,15 @@
 
     .stw-how__mode-mockups {
       display: flex;
-      gap: var(--space-sm);
+      gap: var(--space-md);
       flex-shrink: 0;
     }
 
     .stw-how__mode-mockups .stw-inline-mockup {
-      max-width: 120px;
+      max-width: 200px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .stw-how__mode-content {
         flex-direction: column;
       }
@@ -260,8 +264,12 @@
         width: 100%;
       }
 
+      .stw-how__mode-mockups .stw-inline-mockup {
+        max-width: 180px;
+      }
+
       .stw-mockup-pair .stw-inline-mockup {
-        max-width: 140px;
+        max-width: 200px;
       }
     }
   </style>
