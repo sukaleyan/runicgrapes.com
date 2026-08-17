@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://runicgrapes.com/spot-the-wine.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://runicgrapes.com/shop.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,9 +44,15 @@
   </url>
   <url>
     <loc>https://runicgrapes.com/blog/index.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://runicgrapes.com/blog/when-buddhists-borrowed-the-wine-god.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://runicgrapes.com/blog/hittite-wine.html</loc>
