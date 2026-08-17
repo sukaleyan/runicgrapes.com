@@ -65,8 +65,26 @@
       margin-top: var(--space-xl);
     }
 
+    .stw-how__layout {
+      display: flex;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .stw-how__modes {
+      flex: 1;
+    }
+
+    .stw-how__mockup {
+      flex-shrink: 0;
+    }
+
+    .stw-how__mockup .stw-inline-mockup {
+      max-width: 260px;
+    }
+
     .stw-how__mode {
-      margin-bottom: var(--space-xl);
+      margin-bottom: var(--space-lg);
       padding: var(--space-lg);
       background: var(--color-white);
       border-radius: 8px;
@@ -77,6 +95,16 @@
     .stw-how__mode:last-child {
       border-left-color: var(--color-burgundy);
       margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .stw-how__layout {
+        flex-direction: column;
+      }
+
+      .stw-how__mockup .stw-inline-mockup {
+        max-width: 220px;
+      }
     }
 
     .stw-how__mode-title {
@@ -371,18 +399,26 @@
       </p>
 
       <div class="stw-how">
-        <div class="stw-how__mode">
-          <div class="stw-how__mode-title">discovery</div>
-          <p>
-            You are visiting a wine region — walking through a village, browsing a market, exploring a cellar — and something catches your eye. You open the app, take a photograph, tag the category, and pin it to the map. You have just added to a collective archive that did not exist before.
-          </p>
-        </div>
+        <div class="stw-how__layout">
+          <div class="stw-how__modes">
+            <div class="stw-how__mode">
+              <div class="stw-how__mode-title">exploration</div>
+              <p>
+                You are planning a visit, or already on the ground, and you want to see what others have found. You open the map, browse by region or category, and let the traces guide your route. Each spot is an invitation to look closer at something you might otherwise have walked past.
+              </p>
+            </div>
 
-        <div class="stw-how__mode">
-          <div class="stw-how__mode-title">exploration</div>
-          <p>
-            You are planning a visit, or already on the ground, and you want to see what others have found. You open the map, browse by region or category, and let the traces guide your route. Each spot is an invitation to look closer at something you might otherwise have walked past.
-          </p>
+            <div class="stw-how__mode">
+              <div class="stw-how__mode-title">discovery</div>
+              <p>
+                You are visiting a wine region — walking through a village, browsing a market, exploring a cellar — and something catches your eye. You open the app, take a photograph, tag the category, and pin it to the map. You have just added to a collective archive that did not exist before.
+              </p>
+            </div>
+          </div>
+
+          <div class="stw-how__mockup">
+            <img src="images/stw-mockup-modes.png" alt="Choose your mode" class="stw-inline-mockup">
+          </div>
         </div>
       </div>
 
