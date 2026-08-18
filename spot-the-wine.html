@@ -247,6 +247,36 @@
       margin: var(--space-xl) 0;
     }
 
+    .stw-traces-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+
+    .stw-traces-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 768px) {
+      .stw-traces-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stw-traces-grid {
+        grid-template-columns: 1fr;
+      }
+      .stw-traces-grid img {
+        height: 180px;
+      }
+    }
+
     .stw-mockup-pair .stw-inline-mockup {
       max-width: 240px;
     }
@@ -351,6 +381,15 @@
         <p>These traces can be found in every corner of culture: in the lyrics of a song, in agricultural traditions, in the flavours of a cuisine, or in visual and material culture. As an art historian, the last of these interests me most.</p>
 
         <p>Vines appear in architectural details. Gods and goddesses once worshipped take shape around the wine cup. Harvests are depicted, wine is celebrated, and the joy of drinking this ancient beverage is expressed in countless ways across Europe's wine lands.</p>
+
+        <div class="stw-traces-grid">
+          <img src="images/traces/esslingen-winepress.jpg" alt="Historic wine press in Esslingen, Germany">
+          <img src="images/traces/bilbao-column.jpg" alt="Vine-decorated column in Bilbao">
+          <img src="images/traces/berlin-glass.png" alt="Ancient wine glass, Berlin museum">
+          <img src="images/traces/mosel-wall.png" alt="Wine-themed wall decoration, Mosel">
+          <img src="images/traces/strasbourg-ceramic.jpg" alt="Wine ceramic by local maker, Strasbourg">
+          <img src="images/traces/jean-luc.png" alt="Wine in Art series by Jean-Luc Maniouloux">
+        </div>
 
         <p>To my surprise, however, these traces are often overlooked — or even invisible — in the context of wine tourism. Wine tourism today is certainly much more than simply tasting and buying wine, but I believe the art-historical dimension of wine culture is still waiting to be fully integrated.</p>
 
