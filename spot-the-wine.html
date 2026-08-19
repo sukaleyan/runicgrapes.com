@@ -138,7 +138,7 @@
       }
 
       .stw-how__mockup .stw-inline-mockup {
-        max-width: 220px;
+        max-width: 145px;
       }
     }
 
@@ -183,29 +183,26 @@
       margin-bottom: var(--space-md);
     }
 
-    .stw-founder__photo {
+    .stw-founder__photo-wrap {
       float: right;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 50%;
       margin: 0 0 var(--space-md) var(--space-lg);
-      mask-image: radial-gradient(ellipse at center, black 60%, transparent 75%);
-      -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 75%);
+      text-align: center;
+    }
+
+    .stw-founder__photo {
+      width: 320px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
     }
 
     .stw-founder__caption {
-      float: right;
-      clear: right;
-      width: 200px;
-      text-align: center;
       font-size: var(--text-sm);
       color: var(--color-navy);
       opacity: 0.7;
       font-style: italic;
-      margin-top: calc(-1 * var(--space-sm));
-      margin-right: 0;
+      margin-top: var(--space-xs);
     }
 
     .stw-closing {
@@ -295,9 +292,9 @@
     }
 
     .stw-inline-mockup {
-      max-width: 280px;
+      max-width: 185px;
       height: auto;
-      border-radius: 16px;
+      border-radius: 12px;
       box-shadow: var(--shadow-md);
     }
 
@@ -352,7 +349,7 @@
     }
 
     .stw-mockup-pair .stw-inline-mockup {
-      max-width: 240px;
+      max-width: 160px;
     }
 
     .stw-mockup-single {
@@ -361,7 +358,7 @@
     }
 
     .stw-mockup-single .stw-inline-mockup {
-      max-width: 300px;
+      max-width: 200px;
     }
 
     .stw-how__mode-content {
@@ -381,7 +378,7 @@
     }
 
     .stw-how__mode-mockups .stw-inline-mockup {
-      max-width: 200px;
+      max-width: 135px;
     }
 
     @media (max-width: 900px) {
@@ -395,11 +392,11 @@
       }
 
       .stw-how__mode-mockups .stw-inline-mockup {
-        max-width: 180px;
+        max-width: 120px;
       }
 
       .stw-mockup-pair .stw-inline-mockup {
-        max-width: 200px;
+        max-width: 135px;
       }
     }
   </style>
@@ -638,8 +635,10 @@
     <div class="container container--text">
       <h2>who i am</h2>
       <div class="stw-prose stw-founder">
-        <img src="images/founder.jpg" alt="Sule, spotting the wine in Saint-Émilion" class="stw-founder__photo">
-        <p class="stw-founder__caption">Spotting the wine in Saint-Émilion</p>
+        <div class="stw-founder__photo-wrap">
+          <img src="images/founder.jpg" alt="Sule, spotting the wine in Saint-Émilion" class="stw-founder__photo">
+          <p class="stw-founder__caption">Spotting the wine in Saint-Émilion</p>
+        </div>
         <p>I am an art historian who became fascinated by wine.</p>
 
         <p>My academic background has taught me to look closely — to notice details, to ask where they come from, what they meant, and how their meanings change over time. Wine gave me a new landscape in which to apply that way of looking.</p>
