@@ -34,25 +34,71 @@
     }
 
     .stw-hero__composition {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-xl);
-      margin-top: var(--space-sm);
-      margin-bottom: calc(-1 * var(--space-lg));
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      height: 280px;
+      margin: var(--space-sm) auto calc(-1 * var(--space-lg));
+    }
+
+    .stw-hero__composition img {
+      position: absolute;
+      opacity: 0.4;
     }
 
     .stw-hero__composition .stw-hero__vine {
-      width: 280px;
+      width: 200px;
       height: auto;
-      opacity: 0.35;
     }
 
     .stw-hero__composition .stw-hero__vine--left {
-      transform: scaleX(-1) rotate(12deg);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) scaleX(-1) rotate(12deg);
     }
 
     .stw-hero__composition .stw-hero__vine--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-5deg);
+    }
+
+    .stw-hero__cutout {
+      height: auto;
+    }
+
+    .stw-hero__cutout--1 {
+      width: 140px;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+    }
+
+    .stw-hero__cutout--2 {
+      width: 80px;
+      bottom: 15%;
+      right: 18%;
+      transform: rotate(5deg);
+    }
+
+    .stw-hero__cutout--3 {
+      width: 70px;
+      bottom: 20%;
+      left: 20%;
+      transform: rotate(-8deg);
+    }
+
+    .stw-hero__cutout--4 {
+      width: 65px;
+      top: 5%;
+      right: 25%;
+      transform: rotate(6deg);
+    }
+
+    .stw-hero__cutout--5 {
+      width: 90px;
+      top: 0;
+      left: 22%;
       transform: rotate(-5deg);
     }
 
@@ -426,6 +472,11 @@
     <div class="stw-hero__composition">
       <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--left">
       <img src="images/olgun salkim.png" alt="" class="stw-hero__vine stw-hero__vine--right">
+      <img src="images/hero-cutout-1.png" alt="" class="stw-hero__cutout stw-hero__cutout--1">
+      <img src="images/hero-cutout-2.png" alt="" class="stw-hero__cutout stw-hero__cutout--2">
+      <img src="images/hero-cutout-3.png" alt="" class="stw-hero__cutout stw-hero__cutout--3">
+      <img src="images/hero-cutout-4.png" alt="" class="stw-hero__cutout stw-hero__cutout--4">
+      <img src="images/hero-cutout-5.png" alt="" class="stw-hero__cutout stw-hero__cutout--5">
     </div>
   </section>
 
