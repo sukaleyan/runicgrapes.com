@@ -33,13 +33,30 @@
       line-height: 1.6;
     }
 
+    .stw-hero__composition {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-top: var(--space-xl);
+    }
+
+    .stw-hero__composition .stw-hero__vine {
+      width: 120px;
+      height: auto;
+      opacity: 0.9;
+    }
+
+    .stw-hero__composition .stw-hero__vine--left {
+      transform: scaleX(-1);
+    }
+
     .stw-hero__separator {
-      max-width: 600px;
-      width: 90%;
-      height: 340px;
+      max-width: 400px;
+      width: 60%;
+      height: 300px;
       object-fit: cover;
-      object-position: center bottom;
-      margin: var(--space-xl) auto 0;
+      object-position: center 65%;
       display: block;
       mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 75%);
       -webkit-mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 75%);
@@ -384,15 +401,17 @@
 
   <!-- Hero -->
   <section class="stw-hero">
-    <img src="images/simetrik dal.png" alt="" class="page-decor page-decor--left">
-    <img src="images/olgun salkim.png" alt="" class="page-decor page-decor--right">
     <div class="container">
       <h1>spot the wine</h1>
       <p class="stw-hero__tagline">
         An invitation to discover, document, and share the visual and material culture of wine through a simple app.
       </p>
     </div>
-    <img src="images/hero-triton.jpg" alt="Triton Window at Pena Palace, Sintra" class="stw-hero__separator">
+    <div class="stw-hero__composition">
+      <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--left">
+      <img src="images/hero-triton.jpg" alt="Triton Window at Pena Palace, Sintra" class="stw-hero__separator">
+      <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--right">
+    </div>
   </section>
 
   <!-- The Discovery -->
