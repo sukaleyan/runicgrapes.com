@@ -37,39 +37,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0;
-      margin-top: var(--space-md);
-      transform: scale(0.8);
-      transform-origin: center top;
+      gap: var(--space-xl);
+      margin-top: var(--space-sm);
+      margin-bottom: calc(-1 * var(--space-lg));
     }
 
     .stw-hero__composition .stw-hero__vine {
-      width: 350px;
+      width: 280px;
       height: auto;
-      opacity: 0.4;
+      opacity: 0.35;
     }
 
     .stw-hero__composition .stw-hero__vine--left {
       transform: scaleX(-1) rotate(12deg);
-      margin-right: -60px;
-      z-index: 0;
     }
 
     .stw-hero__composition .stw-hero__vine--right {
       transform: rotate(-5deg);
-      margin-left: -50px;
-      z-index: 0;
-    }
-
-    .stw-hero__separator {
-      max-width: 400px;
-      width: 60%;
-      height: 300px;
-      object-fit: cover;
-      object-position: center 65%;
-      display: block;
-      mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 75%);
-      -webkit-mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 75%);
     }
 
     .stw-section {
@@ -317,8 +301,7 @@
 
     .stw-traces-grid img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: auto;
       border-radius: 8px;
       box-shadow: var(--shadow-sm);
     }
@@ -344,9 +327,6 @@
     @media (max-width: 480px) {
       .stw-traces-grid {
         grid-template-columns: 1fr;
-      }
-      .stw-traces-grid img {
-        height: 180px;
       }
     }
 
@@ -441,7 +421,6 @@
     </div>
     <div class="stw-hero__composition">
       <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--left">
-      <img src="images/hero-triton.jpg" alt="Triton Window at Pena Palace, Sintra" class="stw-hero__separator">
       <img src="images/olgun salkim.png" alt="" class="stw-hero__vine stw-hero__vine--right">
     </div>
   </section>
