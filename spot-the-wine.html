@@ -38,25 +38,25 @@
       align-items: center;
       justify-content: center;
       gap: 0;
-      margin-top: var(--space-xl);
+      margin-top: var(--space-md);
     }
 
     .stw-hero__composition .stw-hero__vine {
-      width: 280px;
+      width: 350px;
       height: auto;
-      opacity: 0.35;
+      opacity: 0.4;
     }
 
     .stw-hero__composition .stw-hero__vine--left {
-      transform: scaleX(-1) rotate(10deg);
-      margin-right: -40px;
-      z-index: 1;
+      transform: scaleX(-1) rotate(12deg);
+      margin-right: -60px;
+      z-index: 0;
     }
 
     .stw-hero__composition .stw-hero__vine--right {
-      transform: rotate(10deg);
-      margin-left: -40px;
-      z-index: 1;
+      transform: rotate(-5deg);
+      margin-left: -50px;
+      z-index: 0;
     }
 
     .stw-hero__separator {
@@ -181,6 +181,31 @@
 
     .stw-founder p {
       margin-bottom: var(--space-md);
+    }
+
+    .stw-founder__photo {
+      float: right;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      margin: 0 0 var(--space-md) var(--space-lg);
+      mask-image: radial-gradient(ellipse at center, black 60%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 75%);
+    }
+
+    .stw-founder__caption {
+      float: right;
+      clear: right;
+      width: 200px;
+      text-align: center;
+      font-size: var(--text-sm);
+      color: var(--color-navy);
+      opacity: 0.7;
+      font-style: italic;
+      margin-top: calc(-1 * var(--space-sm));
+      margin-right: 0;
     }
 
     .stw-closing {
@@ -418,7 +443,7 @@
     <div class="stw-hero__composition">
       <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--left">
       <img src="images/hero-triton.jpg" alt="Triton Window at Pena Palace, Sintra" class="stw-hero__separator">
-      <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--right">
+      <img src="images/olgun salkim.png" alt="" class="stw-hero__vine stw-hero__vine--right">
     </div>
   </section>
 
@@ -592,6 +617,8 @@
 
         <p>This makes Baden a useful place to begin testing Spot the Wine.</p>
 
+        <img src="images/baden-pilot.png" alt="Baden pilot region map showing makers, places, traditions, and traces across the wine region" style="width: 100%; max-width: 900px; margin: var(--space-xl) auto; display: block;">
+
         <p>The aim would not be to create a comprehensive archive of Baden, but to build a small, representative proof of concept: a first collection of cultural traces that demonstrates what becomes visible when we look beyond wineries and tasting rooms. Existing knowledge from wine and tourism organisations, cultural institutions, local makers and communities could help identify places and stories that deserve to be seen.</p>
 
         <p>The pilot would also be an opportunity to test the model itself. What do people choose to spot? What makes them stop and look? Which categories emerge naturally? Do discoveries encourage visitors to explore places, people and stories they might otherwise have missed? And what would make people want to contribute their own discoveries?</p>
@@ -611,6 +638,8 @@
     <div class="container container--text">
       <h2>who i am</h2>
       <div class="stw-prose stw-founder">
+        <img src="images/founder.jpg" alt="Sule, spotting the wine in Saint-Émilion" class="stw-founder__photo">
+        <p class="stw-founder__caption">Spotting the wine in Saint-Émilion</p>
         <p>I am an art historian who became fascinated by wine.</p>
 
         <p>My academic background has taught me to look closely — to notice details, to ask where they come from, what they meant, and how their meanings change over time. Wine gave me a new landscape in which to apply that way of looking.</p>
