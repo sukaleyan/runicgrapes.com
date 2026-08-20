@@ -33,27 +33,15 @@
       line-height: 1.6;
     }
 
-    .stw-hero__composition {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-xl);
-      margin-top: var(--space-sm);
-      margin-bottom: calc(-1 * var(--space-lg));
-    }
-
-    .stw-hero__composition .stw-hero__vine {
-      width: 280px;
+    .stw-hero__video {
+      width: 100%;
+      max-width: 1000px;
       height: auto;
-      opacity: 0.35;
-    }
-
-    .stw-hero__composition .stw-hero__vine--left {
-      transform: scaleX(-1) rotate(12deg);
-    }
-
-    .stw-hero__composition .stw-hero__vine--right {
-      transform: rotate(-5deg);
+      margin-top: var(--space-lg);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.75;
     }
 
     .stw-section {
@@ -422,10 +410,9 @@
       <p class="stw-hero__tagline">
         An invitation to discover, document, and share the visual and material culture of wine through a simple app.
       </p>
-    </div>
-    <div class="stw-hero__composition">
-      <img src="images/simetrik dal.png" alt="" class="stw-hero__vine stw-hero__vine--left">
-      <img src="images/olgun salkim.png" alt="" class="stw-hero__vine stw-hero__vine--right">
+      <video class="stw-hero__video" autoplay muted loop playsinline>
+        <source src="images/stw-hero-video.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
