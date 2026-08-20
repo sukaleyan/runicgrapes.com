@@ -351,6 +351,61 @@
       max-width: 135px;
     }
 
+    /* Lightbox */
+    .stw-enlargeable {
+      cursor: zoom-in;
+      transition: opacity 0.2s ease;
+    }
+
+    .stw-enlargeable:hover {
+      opacity: 0.85;
+    }
+
+    .stw-lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .stw-lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .stw-lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .stw-lightbox__close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .stw-lightbox__close:hover {
+      opacity: 1;
+    }
+
     @media (max-width: 900px) {
       .stw-how__mode-content {
         flex-direction: column;
@@ -547,8 +602,8 @@
       </div>
 
       <div class="stw-mockup-pair" style="max-width: 100%; margin: var(--space-xl) 0;">
-        <img src="images/stw-mockup-4.png" alt="Explore the map" class="stw-inline-mockup">
-        <img src="images/stw-mockup-5.png" alt="Choose a category" class="stw-inline-mockup">
+        <img src="images/stw-mockup-4.png" alt="Explore the map" class="stw-inline-mockup stw-enlargeable">
+        <img src="images/stw-mockup-5.png" alt="Choose a category" class="stw-inline-mockup stw-enlargeable">
       </div>
 
       <div class="stw-prose" style="max-width: 600px; margin: var(--space-xl) auto 0;">
@@ -560,7 +615,7 @@
 
         <div class="stw-mockup-pair" style="max-width: 100%; margin: var(--space-lg) 0;">
           <img src="images/stw-mockup-6.png" alt="Take a photo" class="stw-inline-mockup">
-          <img src="images/stw-mockup-7.png" alt="Earn points" class="stw-inline-mockup">
+          <img src="images/stw-mockup-7.png" alt="Earn points" class="stw-inline-mockup stw-enlargeable">
           <img src="images/stw-mockup-8.png" alt="New discovery" class="stw-inline-mockup">
         </div>
 
@@ -712,6 +767,48 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Lightbox -->
+  <div class="stw-lightbox" id="stwLightbox">
+    <span class="stw-lightbox__close">&times;</span>
+    <img src="" alt="Enlarged view" id="stwLightboxImg">
+  </div>
+
+  <script>
+    (function() {
+      const lightbox = document.getElementById('stwLightbox');
+      const lightboxImg = document.getElementById('stwLightboxImg');
+      const closeBtn = lightbox.querySelector('.stw-lightbox__close');
+
+      // Add enlargeable class to trace grid images
+      document.querySelectorAll('.stw-traces-grid img').forEach(img => {
+        img.classList.add('stw-enlargeable');
+      });
+
+      // Click to open
+      document.querySelectorAll('.stw-enlargeable').forEach(img => {
+        img.addEventListener('click', function() {
+          lightboxImg.src = this.src;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // Click to close
+      lightbox.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      // Escape key to close
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
 <!-- deployed Mon, Aug 17, 2026  4:05:36 PM -->
